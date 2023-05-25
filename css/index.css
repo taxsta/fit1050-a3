@@ -1,0 +1,62 @@
+/*** Custom CSS Changes made by Tim Huang ***/
+.logo{
+    width: 100px;
+    height: auto;
+}
+
+/* Duplicating the templates video styles into our own custom styles for the bg image */
+.image-wrap {
+    z-index: -100;
+  }
+
+
+.custom-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* making embedded map prioritised over the circle div */
+.embedded-map{
+    z-index:3;
+}
+/* Declaring hard coded sizes that will fit responsively but that standardise all image sizes in the carousel */ 
+.carousel-image{
+    height: 500px; /* rather than changing code in the tooplate css file, i have used !important to ensure that this style is upheld*/
+}
+@media screen and (max-width:749px){
+    .carousel-image{
+        height: 300px; /* rather than changing code in the tooplate css file, i have used !important to ensure that this style is upheld*/
+    }
+}
+
+/* Only make the menu image smaller to fit the same size on desktop */
+@media screen and (min-width:750px){
+.menu-image{
+    width: 100%;
+    height: 350px !important; /* rather than changing code in the tooplate css file, i have used !important to ensure that this style is upheld*/
+}
+}
+.custom-btn{
+    z-index:3;
+}
+.BgImage{
+    background-image: url('../images/malaysia-garden-parallax-bg.jpeg');
+}
+.site-footer{
+    background-image: url('../images/table-overlay.jpeg');
+}
+/* custom css for the circle following the cursor */
+#circle{
+    position:absolute;
+    transform:translate(-50%,-50%);
+    height:20px;
+    width:20px;
+    background-color:black;
+    border-radius:50%;
+    border:2px solid black;
+    z-index:2;
+  }
